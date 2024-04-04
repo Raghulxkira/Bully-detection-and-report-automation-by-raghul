@@ -33,14 +33,14 @@ def twitConnection_v1(creds):
     return tweepy.API(auth)
     
     
-#if you want to know how this works - look at video: https://youtu.be/njMMhJz3X4g
+
 #load creds
 creds = yaml.load(open('social_credentials.yml'), Loader=yaml.FullLoader)
 
 client = twitConnection(creds)
 client_v1 = twitConnection_v1(creds)
 
-#example can be found here for basic post: https://youtu.be/HzmNUTg8xWU
+
 #post a msg
 msg = 'Twitter  is amazing! I love it! #Test4'
 response = client.create_tweet(text = msg)
